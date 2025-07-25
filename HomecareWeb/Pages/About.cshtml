@@ -1,0 +1,100 @@
+﻿@page
+@{
+    ViewData["Title"] = "About Us";
+}
+
+@* About Header Main Start *@
+
+<div id="about-main" class="container">
+
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h2 class="display-3">We Serve to Please</h2>
+            <p class="lead col-lg-8 mx-auto">
+                [Your mission statement or welcome message. Example:]<br>
+                We are dedicated to providing compassionate homecare with professionalism, integrity, and heart.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+@* About Header Main End *@
+
+
+@* About Subjects Section Start *@
+
+<div id="about-values" class="container">
+
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h2 class="display-4">Our Values</h2>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <img src="./Images/About-Img/Value_comp.png" class="card-img-top" alt="Compassion">
+                <div class="card-body">
+                    <h5 class="card-title">Compassion</h5>
+                    <p class="card-text">We treat every client and family as our own, with care and empathy.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <img src="./Images/About-Img/Value_prof.png" class="card-img-top" alt="Professionalism">
+                <div class="card-body">
+                    <h5 class="card-title">Professionalism</h5>
+                    <p class="card-text">Our team is highly trained, responsive, and always acts with integrity.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <img src="./Images/About-Img/Value_reli.png" class="card-img-top" alt="Reliability">
+                <div class="card-body">
+                    <h5 class="card-title">Reliability</h5>
+                    <p class="card-text">You can count on us for dependable, flexible care at all times.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<div id="about-leadership" class="row justify-content-center">
+
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <img src="./Images/About-Img/leadership_img.png" class="card-img-top" alt="Leadership">
+                <div class="card-body">
+                    <h3 class="card-title">Strong Leadership</h3>
+                    <p class="card-text">Our experienced leadership team ensures quality care and continuous improvement.</p>
+                    <a asp-page="RequestService" class="btn btn-dark">Meet Our Leadership &gt;</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <img src="./Images/About-Img/passion-img.png" class="card-img-top" alt="Our Passion">
+                <div class="card-body">
+                    <h3 class="card-title">Passionate About Our Work</h3>
+                    <p class="card-text">We’re driven by a true love for helping others and making a positive impact.</p>
+                    <a asp-page="RequestService" class="btn btn-dark">Join Our Team &gt;</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+@* About Subjects Section End *@

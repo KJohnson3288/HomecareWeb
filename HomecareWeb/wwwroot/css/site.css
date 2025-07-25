@@ -1,0 +1,139 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 80vw;
+    margin: auto;
+    background-color: rgb(14, 13, 30);
+}
+
+/* Body Wrapper */
+.wrapper {
+    min-height: 100vh;
+    background-color: white;
+}
+
+
+/* Navbar Section */
+#navbar-section {
+    box-shadow: 0px 2px 0px lightgray;
+}
+
+/* Modern underline on hover and active */
+.navbar-nav .nav-link {
+    position: relative;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0282A9;
+    transition: width 0.2s;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #222; /* slightly darker */
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after,
+.navbar-nav .nav-item.active .nav-link::after {
+    width: 100%;
+}
+
+/* Keep underline and dark text for selected page */
+.navbar-nav .nav-item.active .nav-link {
+color: #222 !important; /* darken selected tab */
+font-weight: 600;
+}
+
+
+/* Hero Carousel */
+#hero-carousel {
+    min-height: 500px;
+}
+
+.carousel-item {
+    position: relative; /* Required for ::before to position correctly */
+}
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity for stronger tint */
+    z-index: 1;
+}
+
+.carousel-caption {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+/* Company Info Section*/
+
+#company-location {
+    min-height: 300px;
+}
+
+/* Services Cards */
+#services-card-section .card {
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#services-card-section .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* shadow on hover */
+    }
+
+#services-card-section .card .card-img-top {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+#services-card-section .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+/* Footer Section */
+footer {
+    box-shadow: 0px -2px 0px lightgray;
+}

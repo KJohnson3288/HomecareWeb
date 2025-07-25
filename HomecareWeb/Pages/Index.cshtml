@@ -1,0 +1,185 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@* Link Stylesheet *@
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+
+
+@* Hero Section Start*@
+
+
+<div id="carouselExampleCaptions" class="carousel slide mb-4" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner rounded shadow">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <img src="./Images/Main/hero_img_1.png" class="d-block w-100" alt="Friendly homecare team with a senior client">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-4">
+                <h1 class="display-4">[Your Business Name]</h1>
+                <p class="lead">Compassionate, trusted care—right at home.</p>
+                <a href="/RequestService" class="btn btn-primary btn-lg mt-2">Request Service</a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <img src="./Images/Main/hero_img_2.png" class="d-block w-100" alt="Caregiver assisting an elderly woman at home">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-4">
+                <h3 class="display-5">Personalized Support</h3>
+                <p>Every client receives care tailored to their unique needs and routines.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <img src="./Images/Main/hero_img_3.png" class="d-block w-100" alt="Family with caregiver smiling together in living room">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-4">
+                <h3 class="display-5">Peace of Mind</h3>
+                <p>Families trust us to keep their loved ones safe, happy, and cared for.</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+
+</div>
+
+
+@* Hero Section End *@
+
+
+
+@* ABout Overview Start *@
+
+<div class="container my-5">
+
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h3 class="display-3">About Us</h3>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+
+        <!-- Image Column -->
+        <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+            <img src="./Images/Main/about_ow_main.png" alt="About Our Homecare Team" class="img-fluid rounded shadow" />
+        </div>
+
+        <!-- Content Column -->
+        <div class="col-12 col-md-7">
+            <h4 class="mb-3">Who We Are</h4>
+            <p>
+                We are a compassionate, family-owned homecare company dedicated to providing comfort, dignity, and support to seniors and those in need. Our team believes every individual deserves to feel safe and respected in the place they call home.
+            </p>
+            <h4 class="mb-3">Our Mission</h4>
+            <p>
+                To improve the quality of life for our clients and their families by delivering exceptional, personalized care with heart and integrity.
+            </p>
+            <h4 class="mb-3">Our Values</h4>
+            <ul>
+                <li>Respect & Empathy</li>
+                <li>Professionalism & Trust</li>
+                <li>Reliability & Flexibility</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+@* About Overview End *@
+
+
+
+@* Services Shortview Start *@
+
+<div id="services-section" class="container my-5">
+
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h3 class="display-3">Services</h3>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Service Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="./Images/Main/service_ow_personal.png" class="card-img-top" alt="Personal Care">
+                <div class="card-body">
+                    <h5 class="card-title">Personal Care</h5>
+                    <p class="card-text">Assistance with bathing, grooming, dressing, and daily living activities.</p>
+                    <a href="/RequestService" class="btn btn-primary">Request Service</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="./Images/Main/service_ow_med.png" class="card-img-top" alt="Medication Reminders">
+                <div class="card-body">
+                    <h5 class="card-title">Medication Reminders</h5>
+                    <p class="card-text">Timely reminders and assistance to keep clients on schedule with their medications.</p>
+                    <a href="/RequestService" class="btn btn-primary">Request Service</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="./Images/Main/service_ow_companion.png" class="card-img-top" alt="Companionship">
+                <div class="card-body">
+                    <h5 class="card-title">Companionship</h5>
+                    <p class="card-text">Friendly conversation, social activities, and emotional support to improve well-being.</p>
+                    <a href="/RequestService" class="btn btn-primary">Request Service</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@* Services Shortview End *@
+
+
+
+@* Contact Overview Start *@
+
+<div id="contact-section" class="container d-flex flex-column justify-content-center align-items-center my-5">
+
+    <div class="row text-center" id="contact-title">
+        <h3 class="display-3"> Contact </h3>
+    </div>
+
+    <div id="contact-options" class="row">
+        <p class="fs-5 fw-light mb-4">Ready to learn more or schedule care? Our team is here to help you every step of the way.</p>
+    </div>
+
+    <div class="row col-sm-4">
+        <a href="@Url.Page("/Contact")" class="btn btn-primary btn-lg px-5">Get in Touch</a>
+    </div>
+
+</div>
+
+@* Contact Overview End *@
+

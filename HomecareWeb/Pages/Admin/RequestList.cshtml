@@ -1,0 +1,47 @@
+﻿@page
+@model RequestListModel
+@{
+    ViewData["Title"] = "Service Requests";
+}
+
+<h2>Submitted Service Requests</h2>
+
+@if (Model.Requests.Any())
+{
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Requested Service</th>
+                <th>Notes</th>
+                <th>Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var request in Model.Requests)
+            {
+                <tr>
+                    <td>@request.FullName</td>
+                    <td>@request.PhoneNumber</td>
+                    <td>@request.Email</td>
+                    <td>@request.RequestedService</td>
+                    <td>@request.Notes</td>
+                    <td>@request.SubmittedAt.ToString("g")</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@request.Id" class="btn btn-sm btn-warning">Edit</a>
+                    </td>
+                    <td>
+                        <a asp-page="Delete" asp-route-id="@request.Id" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No requests submitted yet.</p>
+}

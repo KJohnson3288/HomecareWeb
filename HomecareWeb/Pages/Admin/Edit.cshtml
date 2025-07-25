@@ -1,0 +1,40 @@
+﻿@page "{id:int}"
+@model EditModel
+@{
+    ViewData["Title"] = "Edit Request";
+}
+
+<h2>Edit Service Request</h2>
+
+<form method="post">
+    
+    <input type="hidden" asp-for="ServiceRequest.Id" />
+
+    <div class="mb-3">
+        <label asp-for="ServiceRequest.FullName" class="form-label"></label>
+        <input asp-for="ServiceRequest.FullName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ServiceRequest.PhoneNumber" class="form-label"></label>
+        <input asp-for="ServiceRequest.PhoneNumber" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ServiceRequest.Email" class="form-label"></label>
+        <input asp-for="ServiceRequest.Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ServiceRequest.RequestedService" class="form-label"></label>
+        <input asp-for="ServiceRequest.RequestedService" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ServiceRequest.Notes" class="form-label"></label>
+        <textarea asp-for="ServiceRequest.Notes" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-page="RequestList" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,113 @@
+﻿@page
+@{
+    ViewData["Title"] = "Services";
+}
+
+<div id="services-main" class="container justify-content-evenly">
+
+    <div id="service-title" class="row">
+        <h3 class="display-3">OUR SERVICES</h3>
+    </div>
+
+    <div id="serivces-description" class="row py-4 fw-semibold">
+
+       @* left colomn *@
+        <div id="service-img" class="col-sm-5">
+            <img src="~/Images/Main/Logo-Main.png" alt="Companionship" class="card-img-top" />
+        </div>
+
+        @* right column *@
+        <div id="serivce-overview" class="col-sm-6">
+            <div class="row">
+                <p class="fw-light fs-5">
+                    Our compassionate caregivers provide trusted in-home support tailored to your family's unique needs.
+                </p>
+            </div>
+
+            <div class="row">
+                <a class="btn btn-dark" asp-page="RequestService">Request Services</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="services-card-section" class="container justify-content-evenly">
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <div class="col">
+            <div class="card">
+                <img src="~/Images/Service-Img/Companionship-img.png" alt="Companionship" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Companionship and Conversation</h5>
+                    <p class="card-text">Our caregivers provide meaningful companionship and engaging conversation to help reduce feelings of loneliness and support emotional well-being.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="~/Images/Service-Img/housekeeping-img.png" alt="Companionship" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Light Housekeeping and Meal Prep</h5>
+                    <p class="card-text">We assist with light housekeeping tasks and nutritious meal preparation to ensure your loved ones live comfortably and maintain a healthy diet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="~/Images/Service-Img/Medication-Img.png" alt="Medication Reminder" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Medication Reminders (Not Administration)</h5>
+                    <p class="card-text">Our team offers timely medication reminders to help clients stay on track with their prescribed routines while promoting safety and independence.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="~/Images/Service-Img/Transportation-img.png" alt="Patient being trnsferred" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Transportation to Appointments</h5>
+                    <p class="card-text">We provide reliable transportation to medical appointments, errands, or social activities, ensuring clients remain active and connected.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="~/Images/Service-Img/Post-op-img.png" alt="Companionship" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Post-Op Personal Care (Non-Medical)</h5>
+                    <p class="card-text">Our caregivers support recovery by assisting with daily personal care needs after surgery, helping clients regain strength comfortably at home.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="~/Images/Service-Img/Supervision-Img.png" alt="Companionship" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Alzheimer’s / Dementia Supervision</h5>
+                    <p class="card-text">We offer patient and attentive supervision for individuals with Alzheimer’s or dementia to enhance safety and provide peace of mind for families.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="~/Images/Service-Img/Respite-img.png" alt="Companionship" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Respite Care for Families</h5>
+                    <p class="card-text">Our respite care services give family caregivers a much-needed break, ensuring their loved ones continue to receive compassionate care.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+

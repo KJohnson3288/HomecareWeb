@@ -1,0 +1,113 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HomecareWeb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HomecareWeb.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    @* Navbar Section start *@
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-md-top" id="navbar-section">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand" asp-page="Index"><img src="~/Images/Main/Logo-Main.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top me-2">Homecare</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+         
+                <ul class="navbar-nav">
+                    <li class="nav-item @(Context.Request.Path == "/" ? "active" : "")">
+                        <a class="nav-link" asp-page="/Index">Home</a>
+                    </li>
+                    <li class="nav-item @(Context.Request.Path == "/About" ? "active" : "")">
+                        <a class="nav-link" asp-page="About">About Us</a>
+                    </li>
+                   <li class="nav-item @(Context.Request.Path == "/Services" ? "active" : "")">
+                        <a class="nav-link" asp-page="Services">Our Services</a>
+                    </li>
+                   <li class="nav-item @(Context.Request.Path == "/Contact" ? "active" : "")">
+                        <a class="nav-link" asp-page="Contact">Contact Us</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="justify-content-end">
+                <partial name="_LoginPartial" />
+            </div>
+            
+        </div>
+    </nav>
+
+    @* Navbar Section End *@
+
+
+      <div class="wrapper">
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+      </div>
+
+
+
+
+    @* Company Info Start *@
+
+    <div class="container-fluid border-top align-content-center bg-white" id="company-location">
+        <div class="row text-center">
+            <h4>Company Name</h4>
+        </div>
+
+        <div class="row text-center">
+            <p>1234 Company Address st, Company City, Company State</p>
+        </div>
+
+        <div class="row text-center">
+            <p>(123) 456-7890</p>
+        </div>
+    </div>
+
+    @* Company Info End *@
+
+    @* Footer Section *@
+
+    <footer class="container-fluid bg-white border-top">
+        <div class="row">
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" asp-page="Contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-page="Contact">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-page="Index">Home</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    @* Footer Sectio End *@
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

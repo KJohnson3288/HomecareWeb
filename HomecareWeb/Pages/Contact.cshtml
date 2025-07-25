@@ -1,0 +1,59 @@
+﻿@page
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<div class="container py-5">
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h2>Contact Us</h2>
+            <p class="fs-5 fw-light">Have questions or need support? Reach out and we’ll get back to you promptly.</p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- Contact Form -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Send Us a Message</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Info / Socials -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Contact Information</h5>
+                    <p><i class="bi bi-telephone-fill me-2"></i><b>Phone:</b> (123) 456-7890</p>
+                    <p><i class="bi bi-envelope-fill me-2"></i><b>Email:</b> info@homecare.com</p>
+                    <p><i class="bi bi-geo-alt-fill me-2"></i><b>Address:</b> 123 Main St, Your City, FL</p>
+                    <hr>
+                    <div class="d-flex gap-3">
+                        <a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
